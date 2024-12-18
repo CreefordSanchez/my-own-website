@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.container {
+  width: min(100% - 10px, 1100px);
+  margin-inline: auto;
+}
+
+.break {
+  display: block;
+}

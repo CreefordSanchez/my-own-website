@@ -1,7 +1,46 @@
 @charset "utf-8";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url(./data/utility.css);
+@import url(./data/reset.css);
+
+/* Header */
+header {
+  background-color: #020304;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+header .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 15px 0;
+
+  nav {
+    justify-self: center;
+  }
+
+  button {
+    justify-self: end;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+
+  h1 {    
+    color: #fff;
+    font-family: "Berkshire Swash", sans-serif;
+  }
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+/* Hero Banner */
+.hero {
+  margin-top: 69px;
+  height: calc(100vh - 69px);
+  background-color: antiquewhite;
 }
