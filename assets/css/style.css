@@ -81,3 +81,41 @@ nav ul {
     width: 280px;
   }
 }
+
+/* About me */
+.about-me {
+  background-color: #141414;
+  color: var(--app-white);
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+  }
+
+}
+
+.about-pic-box {
+  background-color: var(--app-orange);
+  height: 567px;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 300px;
+  }
+}
+
+.about-headline p {
+  max-width: 400px;
+}
+
+.resume-btn {
+  width: 100px;
+  height: 35px;
+  background-color: #141414;
+  border: 1px solid var(--app-orange);
+  color: var(--app-white);
+  margin-top: 30px;
+  border-radius: 5px;
+}

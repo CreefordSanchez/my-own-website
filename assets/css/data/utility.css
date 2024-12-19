@@ -6,6 +6,10 @@
   --app-orange: #ffb225;
 }
 
+.section-space {
+  padding: 80px 0;
+}
+
 .container {
   width: min(100% - 10px, 1100px);
   margin-inline: auto;
@@ -17,4 +21,13 @@
 
 .orange {
   color: var(--app-orange);
+}
+
+.p-font-size {
+  font-size: 16px;
+}
+
+.section-title-size {
+  font-size: 50px;
+  font-weight: 400;
 }
