@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+:root {
+  --app-black: #020304;
+  --app-white: #fff;
+}
+
 .container {
   width: min(100% - 10px, 1100px);
   margin-inline: auto;

@@ -5,10 +5,10 @@
 
 /* Header */
 header {
-  background-color: #020304;
   position: fixed;
   top: 0;
   width: 100%;
+  background-color: #00000025;
 }
 
 header .container {
@@ -19,6 +19,10 @@ header .container {
 
   nav {
     justify-self: center;
+  }
+
+  a {
+    color: var(--app-white);
   }
 
   button {
@@ -40,7 +44,30 @@ nav ul {
 
 /* Hero Banner */
 .hero {
-  margin-top: 69px;
-  height: calc(100vh - 69px);
-  background-color: antiquewhite;
+  padding-top: 69px;
+  background-image: url(../img/hero-background.jpg);
+  background-position: 50% 90%;
+  background-size: cover;
+  color: var(--app-white);
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh - 69px);
+  }
+
+  h1 {
+    font-size: 50px;
+  } 
+}
+
+.hero-img-box {
+  background-color: var(--app-white);
+  padding: 20px 20px 30px;
+  rotate: -10deg;
+
+  img {
+    width: 280px;
+  }
 }
