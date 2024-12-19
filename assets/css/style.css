@@ -84,25 +84,21 @@ nav ul {
 
 /* About me */
 .about-me {
-  background-color: #141414;
-  color: var(--app-white);
+  background-color: var(--app-white);
+  color: var(--app-black);
+  position: relative;
 
   .container {
     display: flex;
     align-items: center;
-    gap: 150px;
+    gap: 100px;
+    position: relative;
+    z-index: 1;
   }
 
-}
-
-.about-pic-box {
-  background-color: var(--app-orange);
-  height: 567px;
-  display: flex;
-  align-items: center;
-
+  
   img {
-    width: 300px;
+    width: 400px;
   }
 }
 
@@ -111,11 +107,20 @@ nav ul {
 }
 
 .resume-btn {
-  width: 100px;
-  height: 35px;
-  background-color: #141414;
-  border: 1px solid var(--app-orange);
+  width: 195px;
+  height: 60px;
+  background-color: #111235;
   color: var(--app-white);
-  margin-top: 30px;
+  margin-top: 50px;
   border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.square {
+  height: 260px;
+  width: 475px;
+  background-color: var(--app-orange);
+  position: absolute;
+  bottom: 0;
 }
