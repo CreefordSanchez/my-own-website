@@ -4,18 +4,12 @@
 @import url(./data/reset.css);
 
 /* Header */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #00000025;
-}
-
 header .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   padding: 15px 0;
+  max-height: 69px;
 
   nav {
     justify-self: center;
@@ -32,8 +26,9 @@ header .container {
   }
 
   h1 {    
-    color: #fff;
+    color: var(--app-orange);
     font-family: "Berkshire Swash", sans-serif;
+    font-size: 40px;
   }
 }
 
@@ -44,12 +39,18 @@ nav ul {
 
 /* Hero Banner */
 .hero {
-  padding-top: 69px;
   background-image: url(../img/hero-background.jpg);
   background-position: 50% 90%;
   background-size: cover;
   color: var(--app-white);
+  position: relative;
+  height: 100vh;
+}
 
+.hero-content {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
   .container {
     display: flex;
     align-items: center;
@@ -58,8 +59,17 @@ nav ul {
   }
 
   h1 {
-    font-size: 50px;
+    font-size: 60px;
   } 
+}
+
+.hero-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  top: 0;
+  background-image: linear-gradient(to right, #0000008c, #0000001b);
 }
 
 .hero-img-box {

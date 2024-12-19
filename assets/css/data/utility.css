@@ -3,6 +3,7 @@
 :root {
   --app-black: #020304;
   --app-white: #fff;
+  --app-orange: #ffb225;
 }
 
 .container {
@@ -12,4 +13,8 @@
 
 .break {
   display: block;
+}
+
+.orange {
+  color: var(--app-orange);
 }
