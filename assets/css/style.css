@@ -72,6 +72,7 @@ nav ul {
   background-image: linear-gradient(to right, #0000008c, #0000001b);
 }
 
+
 .hero-img-box {
   background-color: var(--app-white);
   padding: 20px 20px 30px;
@@ -115,7 +116,7 @@ nav ul {
 .resume-btn {
   width: 195px;
   height: 60px;
-  background-color: #111235;
+  background-color: var(--app-blue);
   color: var(--app-white);
   margin-top: 50px;
   border-radius: 5px;
