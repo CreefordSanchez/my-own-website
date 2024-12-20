@@ -116,7 +116,7 @@ nav ul {
 .resume-btn {
   width: 195px;
   height: 60px;
-  background-color: var(--app-blue);
+  background-color: var(--app-orange);
   color: var(--app-white);
   margin-top: 50px;
   border-radius: 5px;
@@ -131,3 +131,95 @@ nav ul {
   position: absolute;
   bottom: 0;
 }
+
+/* Recent Works */
+.projects {
+  h2 {
+    text-align: center;
+  }
+}
+
+.project-list {
+  padding-top: 50px;
+}
+
+.project-content {
+  margin-bottom: 70px;
+}
+
+.project-picture-box {
+  background-color: var(--app-orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 424px;
+  overflow: hidden;
+  padding: 10px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.project-title {
+  margin-top: 24px;
+  font-size: 30px;
+  
+  h3 {
+    font-weight: 400;
+  }
+}
+
+.project-headline {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 450;
+}
+
+.project-link {
+  margin-top: 10px;
+  display: flex;
+  justify-content: right;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 105px;
+    height: 42px;
+    border-radius: 5px;
+  }
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  border-top: 1px solid var(--app-black);
+  margin: 5px 0 20px;
+}
+
+.live-btn {
+  font-weight: 600;
+  color: var(--app-white);
+  background-color: var(--app-orange);
+  margin-right: 10px;
+}
+
+.git-btn {
+  color: var(--app-orange);
+  border: 1px solid var(--app-orange);
+}
+
+/* Media Query */
+@media screen and (min-width:865px) {
+  .project-picture-box {
+    padding: 15px;
+    width: auto;
+    height: auto;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
