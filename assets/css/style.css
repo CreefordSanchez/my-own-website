@@ -85,10 +85,9 @@ nav ul {
 
 /* About me */
 .about-me {
-  background-color: var(--app-white);
+  background-color: rgba(0, 0, 0, 0.027);
   color: var(--app-black);
   position: relative;
-  margin-bottom: 100px;
 
   .container {
     display: flex;
@@ -134,15 +133,11 @@ nav ul {
 }
 
 /* Skills */
-.skills {
-  background-color: #f5f5f544;
-
-  .container {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    gap: 20px;
-  }
+.skills .container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  gap: 20px;
 }
 
 .skill-container {
@@ -194,7 +189,9 @@ nav ul {
 
 
 /* Recent Works */
-.projects {
+.projects {  
+  background-color: rgba(0, 0, 0, 0.027);
+  
   h2 {
     text-align: center;
   }
@@ -271,11 +268,93 @@ nav ul {
   border: 1px solid var(--app-orange);
 }
 
-/* Contact */
-.contact {
-
+/* Contact Me */
+.contact-me {
+  background-color: var(--app-black);
+  color: var(--app-white);
+  padding-bottom: 25px;
 }
 
+.contact-info {
+  display: grid;
+  grid-row: 1fr 1fr 1fr;
+}
+
+.media-links {
+  display: flex;
+  gap: 10px;
+
+  a {
+    height: 35px;
+    width: 35px;
+    background-color: var(--app-orange);
+    color: var(--app-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 17.5px;
+    font-size: 20px;
+  }
+}
+
+form {
+  p {
+    color: #ff0000;
+    padding: 5px 0 15px;
+    height: 45px;
+  }
+
+  button {
+    width: 105px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: var(--app-orange);
+    color: var(--app-white);
+    transition: 0.5s ease;
+    font-size: 15px;
+  }
+
+  button:hover {
+    background-color: var(--app-white);
+    color: var(--app-orange);
+  }
+}
+
+.contact-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+input, textarea {
+  padding: 10px 15px;  
+  width: 480px;
+  border-radius: 5px;
+}
+
+.email, .full-name {
+  height: 30px;
+}
+
+.message {
+  height: 200px; 
+}
+
+/* footer */
+footer {
+  background-color: #131416;
+  padding: 25px 0;
+  color: var(--app-white);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h2 {    
+    color: var(--app-orange);
+    font-family: "Berkshire Swash", sans-serif;
+  }
+}
 /* Media Query */
 @media screen and (min-width:865px) {
   .project-picture-box {
