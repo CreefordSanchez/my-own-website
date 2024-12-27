@@ -152,15 +152,15 @@ nav ul {
   border-radius: 10px;
   border: 1.5px solid var(--app-orange);
   overflow: hidden;
-
-  .bar-level {
-    background-color: var(--app-orange);
-    height: 100%;
-    width: 0;
-    transition: width 0.8s ease;
-  }
 }
 
+.bar-level {
+  background-color: var(--app-orange);
+  height: 100%;
+  width: 0;
+  transition: width 0.8s ease;
+}
+/*
 .skill-container:nth-of-type(2) .bar-level {
   width: 80%;
   height: 100%;
@@ -186,7 +186,7 @@ nav ul {
   height: 100%;
   background-color: var(--app-orange);
 }
-
+*/
 
 /* Recent Works */
 .projects {  
