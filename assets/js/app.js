@@ -2,6 +2,10 @@
 
 import {listen, select, style, selectAll} from './data/utility.js';
 
+/*******************************************
+Animation
+*******************************************/
+
 // about me section
 const aboutMeSection = select('.about-me .container');
 
@@ -47,10 +51,6 @@ listen(window, 'scroll', () => {
 
 });
 
-function animateAboutMe() {
-  sectionAppear(aboutMeSection);
-}
-
 function animateSkill() {
   sectionAppear(skillSection);
   style(htmlBar, 'width', '80%');
@@ -67,3 +67,24 @@ function sectionAppear(selector) {
 function getRectTop(selector) {
   return selector.getBoundingClientRect().top - window.innerHeight;
 }
+
+/*******************************************
+Reload animation 
+*******************************************/
+const loadContainer = select('.load-animation');
+const headingOne = select('.heading-one')
+const headingTwo = select('.heading-two');
+
+listen(window, 'load', () => {
+  sectionAppear(headingOne);
+  setTimeout(() => {
+    sectionAppear(headingTwo);
+  }, 500);
+  setTimeout(() => {
+   style(loadContainer, 'height', '0');
+  }, 1500);
+  setTimeout(() => {
+    style(loadContainer, 'display', 'none');
+  }, 2000);
+
+});
