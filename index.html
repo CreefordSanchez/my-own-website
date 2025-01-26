@@ -13,22 +13,22 @@
     <script src="./assets/js/form.js" type="module"></script>
   </head>
   <body>
+    <header>
+      <div class="container">
+        <h1>TechVibe</h1>
+        <nav>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About Me</a></li>
+            <li><a href="">Projects</a></li>
+          </ul>
+        </nav>
+        <button>Contact Me</button>
+      </div>
+    </header>
+    
     <section class="hero">
-      <div class="hero-content">        
-        <header>
-          <div class="container">
-            <h1>TechVibe</h1>
-            <nav>
-              <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About Me</a></li>
-                <li><a href="">Projects</a></li>
-              </ul>
-            </nav>
-            <button>Contact Me</button>
-          </div>
-        </header>
-
+      <div class="hero-content">
         <div class="container">
           <div class="hero-headline">
             <h1>
@@ -48,8 +48,12 @@
     </section>
 
     <section class="about-me section-space">
-      <div class="container position-down">
-        <img src="./assets/img/about-me-pic.jpg" alt="">
+      <div class="container ">
+        <div class="about-pic-container">
+          <div class="square"></div>
+          <img src="./assets/img/about-me-pic.jpg" alt="Creeford Picture">
+          <div class="square"></div>
+        </div>
         <div class="about-headline">
           <h2 class="section-title-size">
             Creative Thinker, <span class="break">Bridging Logic and Tech</span>
@@ -62,16 +66,15 @@
           <button class="resume-btn">Resume</button>
         </div>
       </div>
-      <div class="square"></div>
     </section>
 
     <section class="skills section-space">
-      <div class="container position-down">
+      <div class="container ">
         <div class="skills-heading">
           <h2 class="section-title-size">
             Skills
           </h2>
-          <p>
+          <p class="p-font-size">
             I am an experienced programmer with four years of expertise in 
             software development, specializing in creating efficient and user-
             friendly solutions while staying up-to-date with industry trends.
@@ -83,24 +86,24 @@
             <div class="bar">
               <div class="bar-level html-bar"></div>
             </div>
-            <p>HTML</p>
+            <p class="p-font-size">HTML</p>
           </div>
           <div class="skill-container">
             <div class="bar">
               <div class="bar-level css-bar"></div>
             </div>
-            <p>CSS</p>
+            <p class="p-font-size">CSS</p>
           </div>
           <div class="skill-container">
             <div class="bar">
               <div class="bar-level js-bar"></div></div>
-            <p>JS</p>
+            <p class="p-font-size">JS</p>
           </div>
           <div class="skill-container">
             <div class="bar">
               <div class="bar-level java-bar"></div>
             </div>
-            <p>Java</p>
+            <p class="p-font-size">Java</p>
           </div>
         </div>
       </div>
@@ -108,11 +111,11 @@
 
     <section class="projects section-space">
       <div class="container">
-        <h2 class="section-title-size position-down">
+        <h2 class="section-title-size ">
           Recent Works
         </h2>
         <div class="project-list">
-          <div class="project-content position-down">
+          <div class="project-content ">
             <div class="project-picture-box">
               <img src="./assets/img/traveling-website.png">
             </div>
@@ -122,8 +125,8 @@
                 <div class="line"></div>                
               </div>
               <div class="project-headline">
-                <p>Design & Development</p>
-                <p>2024</p>
+                <p class="p-font-size">Design & Development</p>
+                <p class="p-font-size">2024</p>
               </div>
             </div>
   
@@ -134,7 +137,7 @@
               class="git-btn" target="_blank">Learn More</a>
             </div>
           </div>
-          <div class="project-content position-down">
+          <div class="project-content ">
             <div class="project-picture-box">
               <img src="./assets/img/death-opening.png">
             </div>
@@ -144,8 +147,8 @@
                 <div class="line"></div>                
               </div>
               <div class="project-headline">
-                <p>Design, Development, & Program</p>
-                <p>2024</p>
+                <p class="p-font-size">Design, Development, & Program</p>
+                <p class="p-font-size">2024</p>
               </div>
             </div>
             
@@ -161,21 +164,21 @@
     </section>
 
     <section class="contact-me section-space">
-      <div class="container position-down">
+      <div class="container ">
         <div class="contact-flex">
           <div class="contact-info">
             <div class="contact-title">
               <h2 class="section-title-size">
                 Contact Me
               </h2>
-              <p>
+              <p class="p-font-size">
                 Get in touch with me! I look forward to hearing from you and will 
                 <span class="break">respond as soon as I can.</span>
               </p>
             </div>
             <div class="my-contact">              
-              <p>(204)-807-9707</p>
-              <p>creewrk@gmail.com</p>
+              <p class="p-font-size">(204)-807-9707</p>
+              <p class="p-font-size">creewrk@gmail.com</p>
             </div>
             <div class="media-links">
               <a href="">
@@ -216,8 +219,8 @@
 
     <div class="load-animation">
       <h1>
-        <span class="position-down heading-one">Hello, my name's</span>
-        <span class="break position-down heading-two">Creeford!</span>
+        <span class=" heading-one">Hello, my name's</span>
+        <span class="break  heading-two">Creeford!</span>
       </h1>
     </div>
   </body>

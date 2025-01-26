@@ -4,12 +4,19 @@
 @import url(./data/reset.css);
 
 /* Header */
-header .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  padding: 15px 0;
-  max-height: 69px;
+header { 
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 15px 0;
+    max-height: 69px;
+  }
 
   nav {
     justify-self: center;
@@ -40,28 +47,29 @@ nav ul {
 /* Hero Banner */
 .hero {
   background-image: url(../img/hero-background.jpg);
-  background-position: 50% 90%;
+  background-position: center;
   background-size: cover;
   color: var(--app-white);
-  position: relative;
-  height: 100vh;
 }
 
 .hero-content {
-  position: absolute;
   width: 100%;
   z-index: 1;
+  padding: 69px 0 10px;
+  background-image: linear-gradient(to right, #0000008c, #0000001b);
+
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: calc(100vh - 69px);
+    margin: 30px auto;
   }
 
   h1 {
     font-size: 60px;
   } 
-}
+}/*
 
 .hero-overlay {
   position: absolute;
@@ -71,9 +79,11 @@ nav ul {
   top: 0;
   background-image: linear-gradient(to right, #0000008c, #0000001b);
 }
-
+*/
 
 .hero-img-box {
+  position: absolute;
+  right: 50px;
   background-color: var(--app-white);
   padding: 20px 20px 30px;
   rotate: -10deg;
@@ -92,14 +102,10 @@ nav ul {
   .container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 100px;
     position: relative;
     z-index: 1;
-  }
-
-  
-  img {
-    width: 400px;
   }
 }
 
@@ -125,11 +131,29 @@ nav ul {
 }
 
 .square {
-  height: 260px;
-  width: 475px;
-  background-color: var(--app-orange);
+  height: 240px;
+  width: 240px;
   position: absolute;
-  bottom: 0;
+  background-color: var(--app-orange);
+  z-index: -1;
+}
+
+.about-pic-container {
+  position: relative;
+
+  img {
+    width: 350px;
+  }
+  
+  .square:nth-of-type(1) {
+    top: -50px;
+    right: -50px;
+  }
+
+  .square:nth-of-type(2) {
+    bottom: -50px;
+    left: -50px;
+  }
 }
 
 /* Skills */
@@ -338,6 +362,7 @@ footer {
   background-color: var(--app-black);
   color: var(--app-white);
   display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   font-size: 40px;
@@ -350,7 +375,39 @@ footer {
   color: var(--app-orange);
 }
 
-/* Media Query */
+/* Media Query*/
+@media screen and (max-width:1200px) {
+  .hero-img-box img {
+    width: 260px;
+  }
+
+  .about-me {
+    padding-left: 50px;
+  }
+}
+
+@media screen and (max-width:1115px) {
+  .section-title-size {
+    font-size: 45px;
+  }
+
+  .p-font-size {
+    font-size: 15px;
+  }
+
+  .resume-btn {
+    width: 150px;
+  }
+
+  .section-space {
+    padding: 80px 0;
+  }
+
+  .hero-img-box {
+    z-index: -1;
+  }
+}
+
 @media screen and (min-width:865px) {
   .project-picture-box {
     padding: 15px;
