@@ -13,22 +13,23 @@
     <script src="./assets/js/form.js" type="module"></script>
   </head>
   <body>
+    <header>
+      <div class="container">
+        <h1>TechVibe</h1>
+        <nav>
+          <ul>
+            <li><a href="" class="p-font-size">Home</a></li>
+            <li><a href="" class="p-font-size">About Me</a></li>
+            <li><a href="" class="p-font-size">Projects</a></li>
+          </ul>
+        </nav>
+        <button>Contact Me</button>
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </header>
+    
     <section class="hero">
-      <div class="hero-content">        
-        <header>
-          <div class="container">
-            <h1>TechVibe</h1>
-            <nav>
-              <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About Me</a></li>
-                <li><a href="">Projects</a></li>
-              </ul>
-            </nav>
-            <button>Contact Me</button>
-          </div>
-        </header>
-
+      <div class="hero-content">
         <div class="container">
           <div class="hero-headline">
             <h1>
@@ -44,12 +45,15 @@
           </div>
         </div>
       </div>
-      <div class="hero-overlay"></div>
     </section>
 
     <section class="about-me section-space">
       <div class="container position-down">
-        <img src="./assets/img/about-me-pic.jpg" alt="">
+        <div class="about-pic-container">
+          <div class="square"></div>
+          <img src="./assets/img/about-me-pic.jpg" alt="Creeford Picture">
+          <div class="square"></div>
+        </div>
         <div class="about-headline">
           <h2 class="section-title-size">
             Creative Thinker, <span class="break">Bridging Logic and Tech</span>
@@ -59,10 +63,9 @@
             blending creativity, logic, and tech. Outside coding, I enjoy gaming 
             and exploring the latest in tech
           </p>
-          <button class="resume-btn">Resume</button>
+          <button class="resume-btn p-font-size">Resume</button>
         </div>
       </div>
-      <div class="square"></div>
     </section>
 
     <section class="skills section-space">
@@ -71,7 +74,7 @@
           <h2 class="section-title-size">
             Skills
           </h2>
-          <p>
+          <p class="p-font-size">
             I am an experienced programmer with four years of expertise in 
             software development, specializing in creating efficient and user-
             friendly solutions while staying up-to-date with industry trends.
@@ -83,24 +86,24 @@
             <div class="bar">
               <div class="bar-level html-bar"></div>
             </div>
-            <p>HTML</p>
+            <p class="p-font-size">HTML</p>
           </div>
           <div class="skill-container">
             <div class="bar">
               <div class="bar-level css-bar"></div>
             </div>
-            <p>CSS</p>
+            <p class="p-font-size">CSS</p>
           </div>
           <div class="skill-container">
             <div class="bar">
               <div class="bar-level js-bar"></div></div>
-            <p>JS</p>
+            <p class="p-font-size">JS</p>
           </div>
           <div class="skill-container">
             <div class="bar">
               <div class="bar-level java-bar"></div>
             </div>
-            <p>Java</p>
+            <p class="p-font-size">Java</p>
           </div>
         </div>
       </div>
@@ -122,8 +125,8 @@
                 <div class="line"></div>                
               </div>
               <div class="project-headline">
-                <p>Design & Development</p>
-                <p>2024</p>
+                <p class="p-font-size">Design & Development</p>
+                <p class="p-font-size">2024</p>
               </div>
             </div>
   
@@ -144,8 +147,8 @@
                 <div class="line"></div>                
               </div>
               <div class="project-headline">
-                <p>Design, Development, & Program</p>
-                <p>2024</p>
+                <p class="p-font-size">Design, Development, & Program</p>
+                <p class="p-font-size">2024</p>
               </div>
             </div>
             
@@ -168,14 +171,14 @@
               <h2 class="section-title-size">
                 Contact Me
               </h2>
-              <p>
+              <p class="p-font-size">
                 Get in touch with me! I look forward to hearing from you and will 
                 <span class="break">respond as soon as I can.</span>
               </p>
             </div>
             <div class="my-contact">              
-              <p>(204)-807-9707</p>
-              <p>creewrk@gmail.com</p>
+              <p class="p-font-size">(204)-807-9707</p>
+              <p class="p-font-size">creewrk@gmail.com</p>
             </div>
             <div class="media-links">
               <a href="">
@@ -192,13 +195,13 @@
           </div>
           <form action="">
             <input type="text" class="full-name" placeholder="Full Name">
-            <p class="full-name-error"></p>
+            <p class="full-name-error p-font-size"></p>
 
             <input type="text" class="email" placeholder="Email">
-            <p class="email-error"></p>
+            <p class="email-error p-font-size"></p>
 
             <textarea class="message" placeholder="Message"></textarea>
-            <p class="message-error"></p>
+            <p class="message-error p-font-size"></p>
 
             <button class="submit">Submit</button>
           </form>
@@ -208,7 +211,7 @@
     <footer>
       <div class="container">
         <h2>TechVibe</h2>
-        <p>
+        <p class="p-font-size">
           &copy; 2024 All Rights Reserved. Terms of Use and Privacy Policy.
         </p>
       </div>
@@ -216,8 +219,8 @@
 
     <div class="load-animation">
       <h1>
-        <span class="position-down heading-one">Hello, my name's</span>
-        <span class="break position-down heading-two">Creeford!</span>
+        <span class="heading-one position-down">Hello, my name's</span>
+        <span class="break heading-two position-down">Creeford!</span>
       </h1>
     </div>
   </body>

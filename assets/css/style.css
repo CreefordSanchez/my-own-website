@@ -4,12 +4,19 @@
 @import url(./data/reset.css);
 
 /* Header */
-header .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  padding: 15px 0;
-  max-height: 69px;
+header { 
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 15px 0;
+    max-height: 69px;
+  }
 
   nav {
     justify-self: center;
@@ -23,6 +30,13 @@ header .container {
     justify-self: end;
     padding: 10px 20px;
     border-radius: 5px;
+  }
+
+  .fa-bars {
+    display: none;
+    font-size: 23px;
+    cursor: pointer;
+    color: var(--app-white);
   }
 
   h1 {    
@@ -40,22 +54,22 @@ nav ul {
 /* Hero Banner */
 .hero {
   background-image: url(../img/hero-background.jpg);
-  background-position: 50% 90%;
+  background-position: center;
   background-size: cover;
   color: var(--app-white);
-  position: relative;
-  height: 100vh;
 }
 
 .hero-content {
-  position: absolute;
-  width: 100%;
   z-index: 1;
+  padding: 69px 0 10px;
+  background-image: linear-gradient(to right, #0000008c, #0000001b);
+
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: calc(100vh - 69px);
+    margin: 30px auto;
   }
 
   h1 {
@@ -63,17 +77,9 @@ nav ul {
   } 
 }
 
-.hero-overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 0;
-  top: 0;
-  background-image: linear-gradient(to right, #0000008c, #0000001b);
-}
-
-
 .hero-img-box {
+  position: absolute;
+  right: 50px;
   background-color: var(--app-white);
   padding: 20px 20px 30px;
   rotate: -10deg;
@@ -92,14 +98,10 @@ nav ul {
   .container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 100px;
     position: relative;
     z-index: 1;
-  }
-
-  
-  img {
-    width: 400px;
   }
 }
 
@@ -125,11 +127,30 @@ nav ul {
 }
 
 .square {
-  height: 260px;
-  width: 475px;
-  background-color: var(--app-orange);
+  height: 240px;
+  width: 240px;
   position: absolute;
-  bottom: 0;
+  background-color: var(--app-orange);
+  z-index: -1;
+}
+
+.about-pic-container {
+  position: relative;
+
+  img {
+    width: 350px;
+  }
+  
+  .square:nth-of-type(1) {
+    top: -50px;
+    right: -50px;
+  }
+
+  .square:nth-of-type(2) {
+    bottom: -50px;
+    left: -50px;
+    background-color: var(--app-black);
+  }
 }
 
 /* Skills */
@@ -321,6 +342,7 @@ footer {
   .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   h2 {    
@@ -350,7 +372,101 @@ footer {
   color: var(--app-orange);
 }
 
-/* Media Query */
+/* Media Query*/
+@media screen and (max-width:1200px) {
+  .hero-img-box img {
+    width: 260px;
+  }
+
+  .about-me {
+    padding-left: 50px;
+  }
+}
+
+@media screen and (max-width:1115px) {
+  .section-title-size {
+    font-size: 45px;
+  }
+
+  .p-font-size {
+    font-size: 15px;
+  }
+
+  .resume-btn {
+    width: 150px;
+  }
+
+  .section-space {
+    padding: 80px 0;
+  }
+
+  .hero-img-box img {
+    width: 240px;
+  }
+}
+
+@media screen and (max-width: 985px) {
+  .hero {
+    position: relative;
+    z-index: -1;
+  }
+
+  .hero-img-box {
+    z-index: -1;
+    bottom: 30px;
+    rotate: 10deg;
+    
+    img {
+      width: 200px;
+    }
+  }
+
+  .contact-title .break {
+    display: inline;
+  }
+
+  .load-animation {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width:880px) {
+  .hero h1 {
+    font-size: 55px;
+  }
+
+  header h1 {
+    font-size: 35px;
+  }
+  
+  .section-title-size {
+    font-size: 40px;
+  }
+
+  .project-context {
+    h3 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+  
+  .about-pic-container img {
+    width: 300px;
+  }
+
+  .resume-btn {
+    width: 135px;
+    height: 55px;
+  }
+
+  .bar {
+    width: 300px;
+  }
+}
+
 @media screen and (min-width:865px) {
   .project-picture-box {
     padding: 15px;
@@ -363,3 +479,169 @@ footer {
   }
 }
 
+@media screen and (max-width:795px) {
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .section-title-size {
+    font-size: 38px;
+  }
+
+  .contact-me .contact-flex {
+    gap: 10px;
+    input, textarea {
+      width: 400px;
+    }
+  }
+
+  header { 
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav, button {
+      display: none;
+    }
+
+    .fa-bars {
+      display: inline;
+    }
+  }
+}
+
+@media screen and (max-width: 725px) {
+  .about-headline {
+    padding-bottom: 140px;
+
+    .break {
+      display: inline;
+    }
+
+    p {
+      max-width: 100%;
+    }
+  }
+
+  .about-pic-container {
+    position: absolute;
+    bottom: -100px;
+    right: 50px;
+
+    .square {
+      width: 130px;
+      height: 130px;
+    }
+
+    .square:nth-of-type(1) {
+      left: -50px;
+    }
+
+    .square:nth-of-type(2) {
+      left: 100px;
+    }
+
+    img {
+      width: 180px;
+    }
+  }
+
+  .skills .container {
+    display: grid;
+  }
+
+  .skill-container {
+    display: flex;
+
+    .bar {
+      order: 2;
+    }
+
+    .p-font-size {
+      width: 38px;
+    }
+  }
+
+  .bar {
+    width: 400px;
+  }
+
+  .contact-flex {
+    display: grid;
+    
+    form {
+      padding-top: 50px;
+      justify-self: center;
+    }
+  }
+
+  .my-contact {
+    padding-top: 20px;
+  }  
+}
+
+@media screen and (max-width: 600px) {
+  .about-pic-container{
+    padding: 15px;
+    background-color: var(--app-orange);
+    
+    .square {
+      display: none;
+    }
+  }
+
+  .load-animation h1 {
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .section-title-size {
+    font-size: 30px;
+  }
+
+  .p-font-size {
+    font-size: 14px;
+  }
+
+  footer .container {
+    gap: 13px;
+
+    .p-font-size {
+      font-size: 9px;
+    }
+  }
+
+  .bar {
+    width: 100%;
+  }
+
+  .about-pic-container {
+    right: 0;
+
+    img {
+      width: 150px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 430px) {
+  .hero h1 {
+    font-size: 37.5px;
+  }
+  .contact-me .contact-flex {
+    input, textarea {
+      width: 300px;
+    }
+  }
+
+  .load-animation h1 {
+    font-size: 40px;
+  }
+}
