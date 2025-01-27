@@ -360,7 +360,6 @@ footer {
   background-color: var(--app-black);
   color: var(--app-white);
   display: flex;
-  display: none;
   justify-content: center;
   align-items: center;
   font-size: 40px;
@@ -424,6 +423,10 @@ footer {
 
   .contact-title .break {
     display: inline;
+  }
+
+  .load-animation {
+    font-size: 30px;
   }
 }
 
@@ -587,6 +590,10 @@ footer {
       display: none;
     }
   }
+
+  .load-animation h1 {
+    font-size: 45px;
+  }
 }
 
 @media screen and (max-width: 545px) {
@@ -632,5 +639,9 @@ footer {
     input, textarea {
       width: 300px;
     }
+  }
+
+  .load-animation h1 {
+    font-size: 40px;
   }
 }
